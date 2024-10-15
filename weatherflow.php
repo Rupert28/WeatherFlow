@@ -103,7 +103,7 @@ function weatherflow_format_weather_data($weather_data, $location_name, $hour_li
         $current_description = ucfirst($weather_data['current']['weather'][0]['description']);
         $current_clouds = $weather_data['current']['clouds'];
         $current_icon_id = $weather_data['current']['weather'][0]['icon'];
-        $current_icon_url = plugins_url("assets/icons/{$current_icon_id}@2x.png",  __FILE__);
+        $current_icon_url = plugins_url("assets/icons/{$current_icon_id}.png",  __FILE__);
         $hourly_forecast = '';
     } else {
         if (current_user_can('manage_options')) {
@@ -135,7 +135,7 @@ function weatherflow_format_weather_data($weather_data, $location_name, $hour_li
             $hour_description = ucfirst($weather_data['hourly'][$i]['weather'][0]['description']);
             $hour_clouds = $weather_data['hourly'][$i]['clouds'];
             $hour_icon_id = $weather_data['hourly'][$i]['weather'][0]['icon'];
-            $hour_icon_url = plugins_url("assets/icons/{$hour_icon_id}@2x.png", __FILE__);
+            $hour_icon_url = plugins_url("assets/icons/{$hour_icon_id}.png", __FILE__);
 
             $hourly_forecast .= "
     <div class='weatherflow-slide'>

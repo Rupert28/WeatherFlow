@@ -5,7 +5,7 @@ Requires at least: 4.0
 Requires PHP: 5.6
 Tested up to: 6.6
 Stable tag: 1.0.0
-License: GPL V2 (or later)
+License: GPL v2 or later
 
 WeatherFlow provides a simple and powerful way to display hourly weather forecasts on your WordPress site.
 
