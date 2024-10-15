@@ -1,0 +1,16 @@
+.weatherflow-admin-flexbox {
+    display: flex;
+
+}
+
+.weatherflow-admin-form,
+.weatherflow-admin-help {
+    width: 50%;
+
+}
+
+.weatherflow-admin-wrap {
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+}

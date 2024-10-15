@@ -1,0 +1,98 @@
+.weather-carousel {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.weather-slide {
+    
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    height: 100%;
+}
+
+
+
+.weather-wrapper {
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 100%;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.weather {
+    border-radius: 5px;
+    background-color: #333333;
+    padding: 1rem 2rem 1rem 2rem;
+}
+
+.weatherflow-heading {
+    color: white ;
+    font-size: 2rem;
+}
+
+.weatherflow-location {
+    color: white;
+}
+
+.owl-nav {
+    color: white;
+}
+
+.owl-carousel {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+
+.flexbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    overflow: hidden;
+}
+
+.weather-icon  {
+    width: 6rem !important;
+    height: auto;
+}
+
+.current-conditions {
+    margin-right: 10px;
+    width: 25%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+@media (max-width: 770px) {
+    .flexbox {
+        flex-direction: column;
+        align-items: center;
+    }
+    .current-conditions {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+.weather-info {
+    padding: 15px;
+    height: 100%;
+}
+
+.weather-info p strong {
+    font-size:  2rem;
+}
+
+
+.weatherflow-error {
+    width: 40%;
+    padding: 10px;
+    background-color: rgb(255, 88, 88);
+    border: 1px solid red;
+    margin: 20px auto;
+}
