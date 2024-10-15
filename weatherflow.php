@@ -138,9 +138,9 @@ function weatherflow_format_weather_data($weather_data, $location_name, $hour_li
             $hour_icon_url = plugins_url("assets/icons/{$hour_icon_id}@2x.png", __FILE__);
 
             $hourly_forecast .= "
-    <div class='weather-slide'>
-        <div class='weather-info'>
-            <img src='" . esc_url($hour_icon_url) . "' alt='Weather Icon' class='weather-icon' />
+    <div class='weatherflow-slide'>
+        <div class='weatherflow-info'>
+            <img src='" . esc_url($hour_icon_url) . "' alt='Weather Icon' class='weatherflow-icon' />
             <p><strong>" . esc_html($hour_time) . "</strong></p>
             <p>" . esc_html($hour_temp) . "°C</p>
             <p>" . esc_html($hour_clouds) . "% clouds</p>
@@ -153,10 +153,10 @@ function weatherflow_format_weather_data($weather_data, $location_name, $hour_li
 
 
     //Whitespace and newlines in normal HTML formatting messes up carousel display
-    return "<div class='weather-wrapper'><div class='weather'><p><strong class='weatherflow-heading'>" . esc_html($hour_limit) . " Hour Forecast</strong></p>" .
+    return "<div class='weatherflow-wrapper'><div class='weatherflow'><p><strong class='weatherflow-heading'>" . esc_html($hour_limit) . " Hour Forecast</strong></p>" .
         ($location_name ? "<p><strong class='weatherflow-location'>📍 " . esc_html($location_name) . "</strong></p>" : "") .
-        "<div class='flexbox'><div class='weather-slide current-conditions'><div class='weather-info'>" .
-        "<img src='" .  esc_url($current_icon_url) . "' alt='Weather Icon' class='weather-icon' /><p><strong>Now</strong></p><p>" . esc_html($current_temp) . "°C</p><p>" . esc_html($current_clouds) . "% clouds</p><p>" . esc_html($current_description) . "</p>" .
+        "<div class='weatherflow-flexbox'><div class='weatherflow-slide weatherflow-current-conditions'><div class='weatherflow-info'>" .
+        "<img src='" .  esc_url($current_icon_url) . "' alt='Weather Icon' class='weatherflow-icon' /><p><strong>Now</strong></p><p>" . esc_html($current_temp) . "°C</p><p>" . esc_html($current_clouds) . "% clouds</p><p>" . esc_html($current_description) . "</p>" .
         "</div>" .
         "</div><div class='owl-carousel owl-theme'>{$hourly_forecast}" .
         "</div></div>" .

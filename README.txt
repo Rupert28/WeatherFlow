@@ -56,3 +56,4 @@ This plugin is licensed under the GPLv2 or later. See the LICENSE file for more 
 == Acknowledgments ==
 
 * Thanks to [OpenWeatherMap](https://openweathermap.org/) for their API and icons, which power the weather data for this plugin.
+* Thanks to [Owl Carousel](https://owlcarousel2.github.io/OwlCarousel2/) for their jQuery carousel.
