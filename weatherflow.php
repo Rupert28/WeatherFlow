@@ -174,12 +174,15 @@ function weatherflow_add_admin_menu()
         'WeatherFlow',
         'manage_options',
         'weatherflow-settings',
-        'weatherflow_settings_page'
+        'weatherflow_settings_page',
+        //base64 encoded SVG for admin menu icon
+        'data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDk2IDk2IiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiPgoJPHRpdGxlPndlYXRoZXItaWNvbnMtMjAtc3ZncmVwby1jb20tc3ZnPC90aXRsZT4KCTxwYXRoIGZpbGw9IiMwMDAwMDAiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0ibTQ0LjggODkuOXY1LjFjMCAxLjQtMS4yIDIuNi0yLjYgMi42LTEuNCAwLTIuNS0xLjItMi41LTIuNnYtNS4xYzAtMS41IDEuMS0yLjYgMi41LTIuNiAxLjQgMCAyLjYgMS4xIDIuNiAyLjZ6bS0xMC44LTc2LjVjLTEtMS0xLTIuNiAwLTMuNiAxLTEgMi43LTEgMy43IDBsMy42IDMuNmMxIDEgMSAyLjYgMCAzLjYtMC41IDAuNS0xLjIgMC44LTEuOCAwLjgtMC43IDAtMS4zLTAuMy0xLjgtMC44em0yMS01Ljd2LTUuMWMwLTEuNCAxLjEtMi42IDIuNi0yLjYgMS40IDAgMi41IDEuMiAyLjUgMi42djUuMWMwIDEuNC0xLjEgMi42LTIuNSAyLjYtMS41IDAtMi42LTEuMi0yLjYtMi42em0xOC45IDkuNGMtMS0xLTEtMi43IDAtMy43bDMuNi0zLjZjMS0xIDIuNy0xIDMuNyAwIDEgMSAxIDIuNiAwIDMuNmwtMy43IDMuN2MtMC41IDAuNS0xLjEgMC43LTEuOCAwLjctMC42IDAtMS4zLTAuMi0xLjgtMC43em0tNDAuNyA2NS4xdjUuMWMwIDEuNC0xLjIgMi42LTIuNiAyLjYtMS40IDAtMi42LTEuMi0yLjYtMi42di01LjFjMC0xLjQgMS4yLTIuNiAyLjYtMi42IDEuNCAwIDIuNiAxLjIgMi42IDIuNnptNTcuNy00OC44YzAgMS40LTEuMSAyLjYtMi41IDIuNmgtNS4yYy0xLjQgMC0yLjUtMS4yLTIuNS0yLjYgMC0xLjQgMS4xLTIuNiAyLjUtMi42aDUuMmMxLjQgMCAyLjUgMS4yIDIuNSAyLjZ6bS00Ni4yIDQxLjF2NS4xYzAgMS40LTEuMSAyLjYtMi41IDIuNi0xLjUgMC0yLjYtMS4yLTIuNi0yLjZ2LTUuMWMwLTEuNCAxLjEtMi42IDIuNi0yLjYgMS40IDAgMi41IDEuMiAyLjUgMi42em0zNC43LTIxLjhjMCA3LjctNi40IDE0LjEtMTQuMSAxNC4xaC05djUuMWMwIDEuNC0xLjIgMi42LTIuNiAyLjYtMS40IDAtMi42LTEuMi0yLjYtMi42di01LjFoLTE3Ljl2NS4xYzAgMS40LTEuMiAyLjYtMi42IDIuNi0xLjQgMC0yLjYtMS4yLTIuNi0yLjZ2LTUuMWgtOWMtNy43IDAtMTQuMS02LjQtMTQuMS0xNC4xIDAtNy44IDYuNC0xNC4yIDE0LjEtMTQuMiAwLjcgMCAxLjUgMC4xIDIuMiAwLjMgMi43LTkuMiAxMS4xLTE1LjcgMjEtMTUuN3EwLjMgMCAwLjYgMC4xYzMuMy00LjggOC45LTcuOCAxNC44LTcuOCA5LjkgMCAxNy45IDguMSAxNy45IDE4IDAgMi44LTAuNiA1LjUtMS44IDcuOSAzLjQgMi42IDUuNyA2LjcgNS43IDExLjR6bS0zMC43LTI4LjZjNi45IDIuMiAxMi4zIDcuNiAxNC40IDE0LjcgMC43LTAuMiAxLjUtMC4zIDIuMi0wLjNxMS45IDAuMSAzLjggMC42YzAuOC0xLjggMS4zLTMuNyAxLjMtNS43IDAtNy4xLTUuOC0xMi44LTEyLjgtMTIuOC0zLjQgMC02LjUgMS4zLTguOSAzLjV6bTI1LjUgMjguNmMwLTUtNC05LTguOS05LTAuNCAwLTEgMC4xLTEuNiAwLjJ2Mi4zYzAgMS41LTEuMSAyLjYtMi41IDIuNi0xLjUgMC0yLjYtMS4xLTIuNi0yLjZ2LTQuMWMtMS40LTgtOC4zLTEzLjgtMTYuNC0xMy44LTguMiAwLTE1LjEgNS44LTE2LjUgMTMuOHY0LjFjMCAxLjUtMS4xIDIuNi0yLjYgMi42LTEuNCAwLTIuNS0xLjEtMi41LTIuNnYtMi4zYy0wLjYtMC4xLTEuMi0wLjItMS42LTAuMi00LjkgMC04LjkgNC04LjkgOSAwIDQuOSA0IDguOSA4LjkgOC45aDQ2LjNjNC45IDAgOC45LTQgOC45LTguOXptLTE3LjkgMjkuNXY1LjFjMCAxLjQtMS4yIDIuNi0yLjYgMi42LTEuNCAwLTIuNi0xLjItMi42LTIuNnYtNS4xYzAtMS40IDEuMi0yLjYgMi42LTIuNiAxLjQgMCAyLjYgMS4yIDIuNiAyLjZ6Ii8+Cjwvc3ZnPgo=',
     );
 }
 
-function weatherflow_settings_page()
-{
+
+
+function weatherflow_settings_page()    {
     if (!current_user_can('manage_options')) {
         return;
     }
@@ -232,24 +235,24 @@ function weatherflow_settings_page()
         echo '<div class="updated"><p>Settings saved successfully!</p></div>';
     }
 
+    //Retrieving options to display in settings
     $api_key = get_option('weatherflow_api_key', '');
     $latitude = get_option('weatherflow_latitude', '');
     $longitude = get_option('weatherflow_longitude', '');
     $location_name = get_option('weatherflow_location_name', '');
     $hour_limit = get_option('weatherflow_hour_limit', 12);
     $display_options = get_option('weatherflow_display_options', [
-        'temp' => false,
-        'clouds' => false,
-        'desc' => false,
+        'temp' => true,
+        'clouds' => true,
+        'desc' => true,
     ]);
-
-    //Defining array for info options
-
+    $background_colour = get_option('weatherflow_background_colour','#333333');
 
 
+//Admin page settings form
 ?>
     <div class="weatherflow-admin-wrap">
-        <h1>WeatherFlow Settings</h1>
+        <h1>🌦 WeatherFlow Settings</h1>
         <strong>This plugin is free to use! <a target="_blank" href="https://buymeacoffee.com/rupertmorgan">Show the developer some love🍺</a></strong>
         <div class="weatherflow-admin-flexbox">
             <div class="weatherflow-admin-form">
@@ -330,7 +333,15 @@ function weatherflow_settings_page()
                             <label for="weatherflow_display_options_desc">Description</label>
                             </td>
                         </tr>
-                        
+                        <tr>
+                            <th>Colour Options</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" id="weatherflow_background_colour" name="weatherflow_background_colour" value="<?php echo esc_attr($background_colour); ?>" class="weatherflow-colour-field" />
+                                <label for="weatherflow_background_colour">Background Colour</label>
+                            </td>
+                        </tr>
                     </table>
                     <?php submit_button('Save Settings'); ?>
             </div>
@@ -365,6 +376,10 @@ function weatherflow_settings_page()
 function weatherflow_enqueue_admin_styles()
 {
     wp_enqueue_style('weatherflow-admin-styles', plugin_dir_url(__FILE__) . 'assets/css/weatherflow-admin.css');
+    wp_enqueue_style('wp-color-picker');
+    wp_enqueue_script('wp-color-picker');
+
+    wp_enqueue_script('weatherflow-admin-js', plugin_dir_url(__FILE__) . 'assets/js/weatherflow-admin.js');
 }
 
 add_action('admin_enqueue_scripts', 'weatherflow_enqueue_admin_styles');
