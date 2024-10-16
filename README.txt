@@ -4,7 +4,7 @@ Tags: weather,forecast,OpenWeatherMap
 Requires at least: 4.0
 Requires PHP: 5.6
 Tested up to: 6.6
-Stable tag: 1.0.1
+Stable tag: 1.1.0
 License: GPL v2 or later
 
 WeatherFlow provides a simple and powerful way to display hourly weather forecasts on your WordPress site.
@@ -41,13 +41,22 @@ WeatherFlow supports any location available through the OpenWeatherMap API. You 
 
 == Changelog ==
 
+= 1.1.0 =
+* Added options for choosing what data is displayed on the plugin.
+* Added settings link to WP Plugins page.
+
 = 1.0.1 =
-Stripped Owl Carousel JS for WP plugin directory acceptance criteria.
+* Stripped Owl Carousel JS for WP plugin directory acceptance criteria.
 
 = 1.0.0 =
 * Initial release of WeatherFlow.
 
 == Upgrade Notice ==
+
+= 1.1.0 =
+* Added options for choosing what data is displayed on the plugin.
+* Added more weather data options to display.
+* Added settings link to WP Plugins page.
 
 = 1.0.1 =
 Stripped Owl Carousel JS for WP plugin directory acceptance criteria.

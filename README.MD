@@ -40,6 +40,12 @@ You can customize the appearance of the weather display by modifying the plugin'
 WeatherFlow supports any location available through the OpenWeatherMap API. You can use geographic coordinates to retrieve the weather information.
 
 ## Changelog
+
+### 1.1.0
+* Added options for choosing what data is displayed on the plugin.
+* Added more weather data options to display.
+* Added settings link to WP Plugins page.
+
 ### 1.0.1
 * Stripped Owl Carousel JS for WP plugin directory acceptance criteria.
 
