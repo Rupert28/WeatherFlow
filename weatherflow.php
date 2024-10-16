@@ -2,7 +2,7 @@
 /*
  * Plugin Name:       WeatherFlow
  * Description:       View detailed hourly weather forecasts.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires at least: 4.0
  * Requires PHP:      5.6
  * Author:            Rupert Morgan
@@ -23,9 +23,8 @@ function weatherflow_enqueue_styles()
     wp_enqueue_style('weatherflow-styles', plugin_dir_url(__FILE__) . 'assets/css/weatherflow.css');
 
 
-    wp_enqueue_style('owl-carousel', plugin_dir_url(__FILE__) . 'assets/owl-carousel/assets/owl.carousel.min.css');
-    wp_enqueue_style('owl-theme', plugin_dir_url(__FILE__) . 'assets/owl-carousel/assets/owl.theme.default.min.css');
-    wp_enqueue_script('owl-carousel-js', plugin_dir_url(__FILE__) . 'assets/owl-carousel/owl.carousel.min.js', array('jquery'), null, true);
+    wp_enqueue_style('owl-carousel', plugin_dir_url(__FILE__) . 'assets/owl-carousel/owl.carousel.css');
+    wp_enqueue_script('owl-carousel-js', plugin_dir_url(__FILE__) . 'assets/owl-carousel/owl.carousel.js', array('jquery'), null, true);
 
 
     wp_enqueue_script('weatherflow-carousel', plugins_url('assets/js/carousel-init.js', __FILE__), array('jquery', 'owl-carousel-js'), null, true);
