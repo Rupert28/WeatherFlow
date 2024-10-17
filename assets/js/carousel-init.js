@@ -13,10 +13,10 @@ jQuery(document).ready(function($) {
             0:{
                 items: 1,
             },
-            500:{
+            700:{
                 items: 2,
             },
-            700: {
+            900: {
                 items: 3
             },
             1200:{
