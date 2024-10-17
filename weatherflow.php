@@ -95,6 +95,24 @@ function weatherflow_fetch_weather_data($api_key, $latitude, $longitude)
     ];
 }
 
+//Dynamic styling options configured by admin, injected as CSS variables here
+function weatherflow_dynamic_styles() {
+    $background_colour = get_option('weatherflow_background_colour');
+    $background_text_colour = get_option('weatherflow_background_text_colour');
+    $card_colour = get_option('weatherflow_card_colour');
+    $card_text_colour = get_option('weatherflow_card_text_colour');
+    echo '<style>
+            :root { 
+                --weatherflow_background_colour: ' . esc_attr(($background_colour) . ';
+                --weatherflow_background_text_colour: ' . esc_attr($background_text_colour) . ';
+                --weatherflow_card_colour: ' . esc_attr($card_colour) . ';
+                --weatherflow_card_text_colour: ' . esc_attr($card_text_colour) . ';
+            }
+        </style>');
+}
+add_action('wp_head', 'weatherflow_dynamic_styles');
+
+//Main function for constructing and displaying plugin widget
 function weatherflow_format_weather_data($weather_data, $location_name, $hour_limit)
 {
     if (isset($weather_data['current'])) {
@@ -227,6 +245,22 @@ function weatherflow_settings_page()    {
         } else {
             $display_options['desc'] = false;
         }
+
+        if (isset($_POST['weatherflow_background_colour'])) {
+            update_option('weatherflow_background_colour', sanitize_text_field($_POST['weatherflow_background_colour']));
+        }
+
+        if (isset($_POST['weatherflow_background_text_colour'])) {
+            update_option('weatherflow_background_text_colour', sanitize_text_field($_POST['weatherflow_background_text_colour'] ));
+        }
+
+        if (isset($_POST['weatherflow_card_colour'])) {
+            update_option('weatherflow_card_colour', sanitize_text_field($_POST['weatherflow_card_colour'] ));
+        }
+
+        if (isset($_POST['weatherflow_card_text_colour'])) {
+            update_option('weatherflow_card_text_colour', sanitize_text_field($_POST['weatherflow_card_text_colour'] ));
+        }
         
         // Save the updated display options
         update_option('weatherflow_display_options', $display_options);
@@ -247,6 +281,9 @@ function weatherflow_settings_page()    {
         'desc' => true,
     ]);
     $background_colour = get_option('weatherflow_background_colour','#333333');
+    $title_text_colour = get_option('weatherflow_background_text_colour','#FFFFFF');
+    $card_colour = get_option('weatherflow_card_colour','#FFFFFF');
+    $card_text_colour = get_option('weatherflow_card_text_colour','#333333');
 
 
 //Admin page settings form
@@ -338,8 +375,38 @@ function weatherflow_settings_page()    {
                         </tr>
                         <tr>
                             <td>
+                            <label for="weatherflow_background_colour">Background Colour</label>
+                            </td>
+                            <td>
                                 <input type="text" id="weatherflow_background_colour" name="weatherflow_background_colour" value="<?php echo esc_attr($background_colour); ?>" class="weatherflow-colour-field" />
-                                <label for="weatherflow_background_colour">Background Colour</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <label for="weatherflow_background_text_colour">Title Text Colour</label>
+                            <br>
+                            <em>This should contrast with the background colour.</em>
+                            </td>
+                            <td>
+                                <input type="text" id="weatherflow_background_text_colour" name="weatherflow_background_text_colour" value="<?php echo esc_attr($title_text_colour); ?>" class="weatherflow-colour-field" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <label for="weatherflow_card_colour">Card Background Colour</label>
+                            </td>
+                            <td>
+                                <input type="text" id="weatherflow_card_colour" name="weatherflow_card_colour" value="<?php echo esc_attr($card_colour); ?>" class="weatherflow-colour-field" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <label for="weatherflow_card_text_colour">Weather Card Text Colour</label>
+                            <br>
+                            <em>This should contrast with the card background colour.</em>
+                            </td>
+                            <td>
+                                <input type="text" id="weatherflow_card_text_colour" name="weatherflow_card_text_colour" value="<?php echo esc_attr($card_text_colour); ?>" class="weatherflow-colour-field" />
                             </td>
                         </tr>
                     </table>
