@@ -1,5 +1,6 @@
 === WeatherFlow ===
 Contributors: rupert28
+Donate link: https://buymeacoffee.com/rupertmorgan
 Tags: weather,forecast,OpenWeatherMap
 Requires at least: 4.0
 Requires PHP: 5.6
@@ -7,7 +8,7 @@ Tested up to: 6.6
 Stable tag: 1.1.0
 License: GPL v2 or later
 
-WeatherFlow provides a simple and powerful way to display hourly weather forecasts on your WordPress site.
+WeatherFlow provides a simple and powerful way to display hourly weather forecasts on your WordPress site in a beautiful scrolling widget.
 
 == Description ==
 
@@ -15,14 +16,14 @@ With WeatherFlow, you can easily embed detailed hourly weather forecasts on your
 
 == Installation ==
 
-1. Upload the `weatherflow` folder to the `/wp-content/plugins/` directory.
-2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. Navigate to the WeatherFlow settings page to enter your OpenWeatherMap API key and configure other settings.
-4. Use the shortcode `[WeatherFlow]` to display the weather forecast on your posts or pages.
+1. Search 'WeatherFlow' in the WordPress Plugin directory on your site.
+2. Click 'Install' on the WeatherFlow plugin.
+3. Click 'Activate' on the WeatherFlow plugin.
+4. Configure WeatherFlow's settings by following the steps in the settings page.
 
 == Shortcode ==
 
-To display the weather forecast, simply add the following shortcode to any post or page: [WeatherFlow]
+To display the weather forecast, simply add the following shortcode to any post or page: [WeatherFlow].
 
 
 == Frequently Asked Questions ==
@@ -33,19 +34,26 @@ You can sign up for a free account at [OpenWeatherMap](https://openweathermap.or
 
 = How do I customize the weather display? =
 
-You can customize the appearance of the weather display by modifying the plugin's CSS. The default styles can be found in the `weatherflow.css` file.
+You can customize the appearance of the weather display by changing the settings in the WeatherFlow admin settings page. There are limited customisation options for now but more are coming!
 
 = What locations does WeatherFlow support? =
 
 WeatherFlow supports any location available through the OpenWeatherMap API. You can use geographic coordinates to retrieve the weather information.
 
+== Screenshots ==
+
+1. WeatherFlow widget.
+2. WeatherFlow settings page.
+
 == Changelog ==
 
 = 1.1.0 =
+* First release on the WP Plugin Directory!
 * Added options for choosing what data is displayed on the plugin.
 * Added settings link to WP Plugins page.
 * Added options for changing colours of the plugin.
 * Moved admin settings to a seperate file.
+* Tweaked responsiveness
 
 = 1.0.1 =
 * Stripped Owl Carousel JS for WP plugin directory acceptance criteria.
@@ -56,20 +64,22 @@ WeatherFlow supports any location available through the OpenWeatherMap API. You 
 == Upgrade Notice ==
 
 = 1.1.0 =
+* First release on the WP Plugin Directory!
 * Added options for choosing what data is displayed on the plugin.
 * Added settings link to WP Plugins page.
 * Added options for changing colours of the plugin.
 * Moved admin settings to a seperate file.
+* Tweaked responsiveness
 
 = 1.0.1 =
-Stripped Owl Carousel JS for WP plugin directory acceptance criteria.
+* Stripped Owl Carousel JS for WP plugin directory acceptance criteria.
 
 = 1.0.0 =
-Initial release of WeatherFlow.
+* Initial release of WeatherFlow.
 
 == License ==
 
-This plugin is licensed under the GPLv2 or later. See the LICENSE file for more information.
+This plugin is licensed under the GPLv2 or later.
 
 == Acknowledgments ==
 
