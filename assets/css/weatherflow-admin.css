@@ -6,6 +6,7 @@
 .weatherflow-admin-form,
 .weatherflow-admin-help {
     width: 50%;
+    padding: 20px;
 
 }
 
@@ -13,4 +14,10 @@
     background-color: white;
     padding: 20px;
     margin: 10px;
+}
+
+.weatherflow-support-link {
+    font-size: 18px;
+    display: block;
+    padding-bottom: 10px;
 }

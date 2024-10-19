@@ -28,6 +28,10 @@ To display the weather forecast, simply add the following shortcode to any post 
 
 == Frequently Asked Questions ==
 
+= Can I display daily or weekly forecasts? =
+
+Support for this is in the pipeline. WeatherFlow was initially built as a custom solution for a private business, hence the niche functionality. More features coming soon!
+
 = Where can I get an OpenWeatherMap API key? =
 
 You can sign up for a free account at [OpenWeatherMap](https://openweathermap.org/api) and obtain your API key from your account dashboard.
@@ -47,6 +51,12 @@ WeatherFlow supports any location available through the OpenWeatherMap API. You 
 
 == Changelog ==
 
+=1.1.1=
+* Added readme for github
+* Tweaked responsiveness and spacing
+* Fixed issue with '% cloud' not displaying
+* Added help links to admin page
+
 = 1.1.0 =
 * First release on the WP Plugin Directory!
 * Added options for choosing what data is displayed on the plugin.
@@ -62,6 +72,12 @@ WeatherFlow supports any location available through the OpenWeatherMap API. You 
 * Initial release of WeatherFlow.
 
 == Upgrade Notice ==
+
+=1.1.1=
+* Added readme for github
+* Tweaked responsiveness and spacing
+* Fixed issue with '% cloud' not displaying
+* Added help links to admin page
 
 = 1.1.0 =
 * First release on the WP Plugin Directory!

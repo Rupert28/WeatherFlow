@@ -233,7 +233,9 @@ function weatherflow_settings_page()    {
 
             </form>
             <div class="weatherflow-admin-help">
-                <p class="weatherflow-info"><strong>Get Started:</strong><br>
+                <p class="weatherflow-info">
+                <strong class="weatherflow-support-link">For help with WeatherFlow, or to suggest a feature, create a topic on the support site <a href="https://wordpress.org/support/plugin/weatherflow/">here.</a><br>Support for more forecast metrics and intervals (daily, weekly) is on the way!</strong>
+                <strong>Get Started:</strong><br>
                 <ol>
                     <li><strong>Get an API Key.</strong> This plugin uses OpenWeatherMap's One Call API 3.0. It is a paid service, however the first 1000 calls a day are free. You can also set a limit so that you never exceed the free number of calls and therefore aren't charged. Go to <a target="_blank" href="https://openweathermap.org/api/one-call-3">https://openweathermap.org/api/one-call-3</a> and follow the instructions under 'How to start'. Paste your API Key in here once you've got it.</li>
                     <li><strong>Add your location.</strong> Future updates will likely bring a location search box, but for now please use a service like <a target="_blank" href="https://www.latlong.net/">https://www.latlong.net/</a> for now.</li>

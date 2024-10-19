@@ -171,7 +171,7 @@ function weatherflow_format_weather_data($weather_data, $location_name, $hour_li
                 $hourly_forecast .= '<p>'. esc_html($hour_temp) . '°C</p>';
             }
             if ($display_options['clouds'] == "1") {
-                $hourly_forecast .= '<p>'. esc_html($hour_clouds) . '%</p>';
+                $hourly_forecast .= '<p>'. esc_html($hour_clouds) . '% cloud</p>';
             }
             if ($display_options['desc'] == "1") {
                 $hourly_forecast .= '<p>'. esc_html($hour_description) . '</p>';
@@ -189,7 +189,7 @@ function weatherflow_format_weather_data($weather_data, $location_name, $hour_li
         $current_temp = "";
     }
     if ($display_options['clouds'] == 1) {
-        $current_clouds = "<p>" . $current_clouds . "%</p>";
+        $current_clouds = "<p>" . $current_clouds . "% cloud</p>";
     } else {
         $current_clouds = "";
     }
