@@ -5,7 +5,7 @@ Tags: weather,forecast,OpenWeatherMap
 Requires at least: 4.0
 Requires PHP: 5.6
 Tested up to: 6.6
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPL v2 or later
 
 WeatherFlow provides a simple and powerful way to display hourly weather forecasts on your WordPress site in a beautiful scrolling widget.

@@ -2,7 +2,7 @@
 /*
  * Plugin Name:       WeatherFlow
  * Description:       View detailed hourly weather forecasts.
- * Version:           1.1.0
+ * Version:           1.1.1
  * Requires at least: 4.0
  * Requires PHP:      5.6
  * Author:            Rupert Morgan
