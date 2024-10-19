@@ -202,8 +202,8 @@ function weatherflow_format_weather_data($weather_data, $location_name, $hour_li
 
 
     //Whitespace and newlines in normal HTML formatting messes up carousel display
-    return "<div class='weatherflow-wrapper'><div class='weatherflow-weather'><p><strong class='weatherflow-heading'>" . esc_html($hour_limit) . " Hour Forecast</strong></p>" .
-        ($location_name ? "<p><strong class='weatherflow-location'>📍 " . esc_html($location_name) . "</strong></p>" : "") .
+    return "<div class='weatherflow-wrapper'><div class='weatherflow-weather'><strong class='weatherflow-heading'>" . esc_html($hour_limit) . " Hour Forecast</strong>" .
+        ($location_name ? "<br><strong class='weatherflow-location'>📍 " . esc_html($location_name) . "</strong>" : "") .
         "<div class='weatherflow-flexbox'><div class='weatherflow-slide weatherflow-current-conditions'><div class='weatherflow-info'>" .
         "<img src='" .  esc_url($current_icon_url) . "' alt='Weather Icon' class='weatherflow-icon' /><p><strong>Now</strong></p>" .
         wp_kses_post($current_temp) .

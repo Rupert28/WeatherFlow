@@ -52,8 +52,8 @@ WeatherFlow supports any location available through the OpenWeatherMap API. You 
 * Added options for choosing what data is displayed on the plugin.
 * Added settings link to WP Plugins page.
 * Added options for changing colours of the plugin.
-* Moved admin settings to a seperate file.
-* Tweaked responsiveness
+* Moved admin settings to a separate file.
+* Tweaked responsiveness.
 
 = 1.0.1 =
 * Stripped Owl Carousel JS for WP plugin directory acceptance criteria.
